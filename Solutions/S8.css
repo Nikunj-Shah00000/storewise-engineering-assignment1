@@ -1,0 +1,54 @@
+/* src/styles/TaskCard.css */
+.task-card {
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.task-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.task-name {
+  font-weight: 600;
+  color: #333;
+}
+
+.task-description {
+  min-height: 60px;
+}
+
+.card-body {
+  flex: 1;
+}
+
+.status-selector {
+  margin-top: 8px;
+}
+
+.status-selector button {
+  transition: all 0.2s;
+}
+
+.status-selector button:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .task-card:hover {
+    transform: translateY(-4px);
+  }
+
+  .status-selector button {
+    font-size: 10px;
+    padding: 4px 8px;
+  }
+}
